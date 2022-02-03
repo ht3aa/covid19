@@ -15,7 +15,7 @@ const MainHome = () => {
             <img src={ corona19bg } style={{
                 left: `${Math.floor(Math.random() * 100)}%`,
                 top: `${Math.floor(Math.random() * 100)}%`,
-            }} className="corona19bg"  alt="corona19 background" />
+            }} className="corona19bg"  alt="corona19 background" key={i}/>
         );
     }
 

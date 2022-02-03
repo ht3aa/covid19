@@ -23,13 +23,13 @@ const NavBar = () => {
     })
     return (
         <nav style={{ background: bgColor }}>
-            <h5>من نحن؟</h5>
+            <Link to="/aboutUs"><h5>من نحن؟</h5></Link>
             <ul 
                 onClick={(e) => {
                     makeItActive(e.target);
                 }}
             >
-                <Link to="/"><li><p>المعدل الأجمالي</p></li></Link>
+                <Link to="/totals"><li><p>المعدل الأجمالي</p></li></Link>
                 <Link to="vaccien"><li><p>اللقاحات</p></li></Link>
                 <Link to="/"><li><p>الصفحة الرئيسية</p></li></Link>
                 
@@ -49,7 +49,7 @@ const NavBar = () => {
                         makeItActive(e.target);
                     }}
                 >
-                    <Link to="/"><li><p>المعدل الأجمالي</p></li></Link>
+                    <Link to="/totals"><li><p>المعدل الأجمالي</p></li></Link>
                     <Link to="vaccien"><li><p>اللقاحات</p></li></Link>
                     <Link to="/"><li><p>الصفحة الرئيسية</p></li></Link>
                 </ul>    

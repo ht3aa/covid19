@@ -3,6 +3,8 @@ import NavBar from './pages/navbar/NavBar';
 import Home from './pages/home/Home';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Vaccine from './pages/vaccien/Vaccien';
+import Totals from './pages/totals/Totals';
+import AboutUs from './pages/aboutUs/AboutUs';
 
 function App() {
 
@@ -10,8 +12,10 @@ function App() {
     <BrowserRouter>
       <NavBar /> 
       <Routes>
-        <Route path="/vaccien" element={<Vaccine />}/>
         <Route path="/" element={<Home />}/>
+        <Route path="/vaccien" element={<Vaccine />}/>
+        <Route path="/totals" element={<Totals />}/>
+        <Route path="/aboutUs" element={<AboutUs />}/>
       </Routes>
     </BrowserRouter>
   );

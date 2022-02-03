@@ -1,0 +1,92 @@
+.heroTotals {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    background: radial-gradient(110.76% 436.38% at -8.47% -10.89%, #000000 0%, #BD0005 100%);
+    overflow: hidden;
+    position: relative;
+}
+.heroTotals .corona19bg {
+    width: 285px;
+    position: absolute;
+}
+.heroTotals h2,
+.heroTotals h4 {
+    font-weight: normal;
+}
+.heroTotals .corona19,
+.heroTotals .mainContent {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+}
+
+.heroTotals .corona19 img {
+    transform: rotateY(180deg);
+}
+
+
+.heroTotals .mainContent {
+    direction: rtl;
+    color: white;
+    padding-top: 10px;
+}
+.heroTotals .mainContent table {
+    width: 360px;
+    height: 700px;
+    border-spacing: 50px;
+}
+.heroTotals .mainContent table td {
+    width: 50%;
+    text-align: center;
+}
+.heroTotals .mainContent table h4 {
+    width: max-content;
+    margin: 0 auto;
+    height: 2.5rem;
+}
+.heroTotals .mainContent table .head {
+    height: 70px;
+}
+.heroTotals .mainContent table .head h4 {
+    width: max-content;
+    margin: 0 auto;
+    border-bottom: 1px solid white;
+}
+.heroTotals .mainContent table .head2 {
+    margin-bottom: 10px;
+
+
+}
+.border {
+    border-bottom: 1px solid white;
+}
+@media only screen and (max-width: 950px) {
+    .heroTotals {
+        flex-direction: column;
+        align-items: center;
+    }
+    .heroTotals .mainContent {
+        text-align: center;
+        padding-top: 50px;
+        width: 80%;
+        order: 1;
+    }
+    .heroTotals .corona19 {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 50%;
+        order: 2;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .heroTotals .corona19 {
+        display: none;
+    }
+}

@@ -33,7 +33,7 @@ const Header = () => {
             <img src={ corona19bg } style={{
                 left: `${Math.floor(Math.random() * 100)}%`,
                 top: `${Math.floor(Math.random() * 100)}%`,
-            }} className="corona19bg"  alt="corona19 background" />
+            }} className="corona19bg"  alt="corona19 background" key={i}/>
         );
     }
 
@@ -52,9 +52,9 @@ const Header = () => {
                 <button><p>ابحث</p></button>
             </form>
             <ul className="filters">
-                {filtersCities.map((city) => {
+                {filtersCities.map((city, key) => {
                     return (
-                        <li><h5>{ city }</h5></li>
+                        <li key={key}><h5>{ city }</h5></li>
                     )
                 })}
             </ul>

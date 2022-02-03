@@ -11,7 +11,7 @@ const MainVaccien = () => {
     
     for(let i = 0; i < vaccineCardsAmmount; i++) {
         vaccineCards.push(
-            <div className="cardVaccienContainer">
+            <div className="cardVaccienContainer" key={i}>
                 <h3>اسم المستشفى</h3>
                 <div className="cardVaccien">
                     <div className="tableHead">
@@ -43,7 +43,7 @@ const MainVaccien = () => {
     return (
         <div className="mainVaccienConatiner">
             <div className="mainVaccien">
-                {vaccineCards.map((card, key) => {
+                {vaccineCards.map((card) => {
                     return card
                 })}
             </div>
