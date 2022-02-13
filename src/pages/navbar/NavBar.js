@@ -40,7 +40,7 @@ const NavBar = () => {
             <ul 
             >
                 <Link to="/totals"><li><p>المعدل الأجمالي</p></li></Link>
-                <Link to="vaccien"><li><p>اللقاحات</p></li></Link>
+                <Link to="vaccine"><li><p>اللقاحات</p></li></Link>
                 <Link to="/"><li><p className="active">الصفحة الرئيسية</p></li></Link>
                 
             </ul>
@@ -56,7 +56,7 @@ const NavBar = () => {
             {showMenu && <div className="nav-small">
                 <ul onClick={removeMenu}>
                     <Link to="/totals"><li><p>المعدل الأجمالي</p></li></Link>
-                    <Link to="vaccien"><li><p>اللقاحات</p></li></Link>
+                    <Link to="vaccine"><li><p>اللقاحات</p></li></Link>
                     <Link to="/"><li><p>الصفحة الرئيسية</p></li></Link>
                 </ul>    
             </div>}

@@ -12,7 +12,7 @@ const Header = () => {
             <div className="mainContent">
                 <h1>سوف نساعدك في الحصول على اللقاح ضد covid19</h1>
                 <h4>كورونا مرض خطير. من الواجب الحذر منة و اخذ اللقاح و الأحتياطات اللازمة و هذا الذي نوفره لك.</h4>
-                <Link to="vaccien">
+                <Link to="vaccine">
                     <button onClick={(e) => {
                             makeItActive(e.target);
                         }}>
