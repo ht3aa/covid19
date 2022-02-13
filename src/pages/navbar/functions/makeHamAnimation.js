@@ -1,23 +1,23 @@
 const speed = 200;
 
-export const startHamAnimation = (refHamIconDiv) => {
+export const startHamAnimation = ({ current: hamIcoinDiv }) => {
 
-    refHamIconDiv.current.classList.add('resetPosition');
+    hamIcoinDiv.classList.add('resetPosition');
     setTimeout(() => {
-        refHamIconDiv.current.classList.add('rotate'); 
+        hamIcoinDiv.classList.add('rotate'); 
         setTimeout(() => {
-            refHamIconDiv.current.classList.add('rotateMore');                
+            hamIcoinDiv.classList.add('rotateMore');                
         }, speed);           
     }, speed);
 }
 
-export const removeHamAnimation = (refHamIconDiv) => {
+export const removeHamAnimation = ({ current: hamIcoinDiv }) => {
 
-    refHamIconDiv.current.classList.remove('rotateMore');
+    hamIcoinDiv.classList.remove('rotateMore');
     setTimeout(() => {
-        refHamIconDiv.current.classList.remove('rotate'); 
+        hamIcoinDiv.classList.remove('rotate'); 
         setTimeout(() => {
-            refHamIconDiv.current.classList.remove('resetPosition');                
+            hamIcoinDiv.classList.remove('resetPosition');                
         }, speed);           
     }, speed);
 }

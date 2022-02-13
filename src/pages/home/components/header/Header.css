@@ -1,47 +1,51 @@
-.hero {
+.homeHero {
     width: 100%;
     display: flex;
     padding: 50px;
     background: radial-gradient(110.76% 436.38% at -8.47% -10.89%, #000000 0%, #BD0005 100%);
 }
-.hero .corona19,
-.hero .mainContent {
+
+
+.corona19,
+.mainContent {
     width: 50%;
     height: 50%;
 }
 
-.hero .corona19 img {
+
+.corona19 img {
     transform: rotateY(180deg);
 }
 
 
-.hero .mainContent {
+.mainContent {
     direction: rtl;
     color: white;
     padding-top: 104px;
 }
-.hero .mainContent h1 {
+.mainContent h1 {
     margin-bottom: 2.5rem;
 }
-.hero .mainContent h4 {
+.mainContent h4 {
     font-weight: normal;
 }
-.hero .mainContent button {
+.mainContent button {
     margin-top: 1.875rem;
 }
 
+
 @media only screen and (max-width: 950px) {
-    .hero {
+    .homeHero {
         flex-direction: column;
         align-items: center;
     }
-    .hero .mainContent {
+    .mainContent {
         text-align: center;
         padding-top: 50px;
         width: 80%;
         order: 1;
     }
-    .hero .corona19 {
+    .corona19 {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -50,7 +54,7 @@
     }
 }
 @media only screen and (max-width: 650px) {
-    .hero .corona19 {
+    .corona19 {
         display: none;
     }
 }

@@ -1,9 +1,9 @@
 import Header from "./components/header/Header";
 
-const Totals = () => {
+const Totals = ({statisticsData}) => {
     return (
         <div className="totals">
-            <Header />
+            <Header statisticsData={statisticsData} />
         </div>
     )
 }

@@ -17,6 +17,8 @@
 
 body {
   font-family: "Almarai";
+  max-width: 2000px;
+  margin: 0 auto;
 }
 
 @media only screen and (max-width: 840px) {
@@ -44,15 +46,21 @@ i {font-size: 1.25rem;}
 ul {
   list-style: none;
 }
+
+
 a {
   text-decoration: none;
   color: none;
 }
+
+
 input {
   font-family: "Almarai";
   font-size: 1.5rem;
   outline: none;
 }
+
+
 button {
   font-family: "Almarai";
   background-color: var(--secondaryDark-color);
@@ -62,7 +70,22 @@ button {
   cursor: pointer;
   outline: none;
 }
+@media only screen and (max-width: 840px) {
+  button {
+    padding: 12px;
+  }
+}
 button:hover,
 button:focus {
   background-color: #016269;
+}
+
+
+.list .corona19bg {
+  width: 285px;
+  position: absolute;
+}
+.corona19bg {
+  width: 285px;
+  position: absolute;
 }

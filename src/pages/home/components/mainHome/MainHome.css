@@ -13,7 +13,6 @@
 }
 
 
-
 .span2 {    
     grid-column: span 2;
 }
@@ -27,10 +26,7 @@
     overflow: hidden;
     background: radial-gradient(110.76% 436.38% at -8.47% -10.89%, #000000 0%, #BD0005 100%);
 }
-.list .corona19bg {
-    width: 285px;
-    position: absolute;
-}
+
 
 .cardContainer {
     display: flex;
@@ -38,6 +34,8 @@
     flex-wrap: wrap;
     align-items: center;
 }
+
+
 .card {
     width: 360px;
     padding: 4.063rem 2rem 4.063rem 2rem;
@@ -47,7 +45,15 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
     position: relative;
 }
-.card .itemNumber {
+.card h4 {
+    margin-bottom: 25px;
+}
+.card h5 {
+    font-weight: normal;
+}
+
+
+.itemNumber {
     width: 64px;
     height: 64px;
     position: absolute;
@@ -61,23 +67,21 @@
     justify-content: center;
     color: white;
 }
-.card .itemNumber h3 {
+.itemNumber h3 {
     margin: 0;
 }
-.card h4 {
-    margin-bottom: 25px;
-}
-.card h5 {
-    font-weight: normal;
-}
+
 
 .left {
     padding-left: 4.375rem;
 }
+
+
 .right {
     padding-right: 4.375rem;
     padding-left: 5rem;
 }
+
 
 .content {
     direction: rtl;
@@ -88,6 +92,10 @@
 }
 .content button {
     margin-top: 25px;
+}
+.content ul {
+    display: flex;
+    list-style: circle;
 }
 
 
@@ -108,8 +116,13 @@
         width: 75%;
         justify-self: center;
     }
+    .left {
+        padding: 0;
+    }
     .right {
         padding-right: 0;
+        padding-left: 0;
+        text-align: center;
     }
     .cardContainer {
         flex-direction: column-reverse;
@@ -131,5 +144,3 @@
         order: 5;
     }
 }
-
-

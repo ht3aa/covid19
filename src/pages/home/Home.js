@@ -3,7 +3,7 @@ import MainHome from "./components/mainHome/MainHome.js";
 
 const Home = () => {
     return (
-        <div className="home">
+        <div>
             <Header />
             <MainHome />
         </div>

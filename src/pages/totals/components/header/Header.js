@@ -1,27 +1,29 @@
 import "./Header.css"
 import corona19 from "../../../../assets/imgs/corona19.png";
-import corona19bg from "../../../../assets/imgs/corona19bg.png";
+import generateCorona19BgImg from "../../../../globalFunctions/generateCorona19BgImg";
+import { useEffect, useState } from "react";
+import { filtersStaticsData } from "../../functions/filtersStaticsData";
 
-const Header = () => {
+const Header = ({statisticsData}) => {
+    const [data, setData] = useState({
+        todayInjured: "",
+        totalInjured: "",
+        totalHealing: "",
+        totalDeaths: "",
+    })
 
+    useEffect(() => {
+        if(statisticsData) {
+            setData(filtersStaticsData(statisticsData));
+        }
+    }, [statisticsData])
 
-    const corona19bgArr = [];
-    const corona19bgAmmount = 14;
-
-    for(let i = 0; i < corona19bgAmmount; i++) {
-        corona19bgArr.push(
-            <img src={ corona19bg } style={{
-                left: `${Math.floor(Math.random() * 100)}%`,
-                top: `${Math.floor(Math.random() * 100)}%`,
-            }} className="corona19bg"  alt="corona19 background" key={i}/>
-        );
-    }
-
+    
     return (
         <div className="heroTotals">
             <div className="corona19bgContainer">
-                {corona19bgArr.map((corona19bg) => {
-                    return corona19bg;
+                {generateCorona19BgImg(10).map((corona19bgImg) => {
+                    return corona19bgImg;
                 })}
             </div>
             <div className="corona19">
@@ -42,13 +44,13 @@ const Header = () => {
                             <td>
                                 <div>
                                     <h4 className="head2">اليومي</h4>
-                                    <h2>2000</h2>
+                                    <h2>{ data.todayInjured }</h2>
                                 </div>
                             </td>
                             <td>
                                 <div>
                                     <h4 className="head2">التراكمي</h4>
-                                    <h2>200000</h2>
+                                    <h2>{ data.totalInjured }</h2>
                                 </div>
                             </td>
                         </tr>
@@ -59,13 +61,13 @@ const Header = () => {
                             <td>
                                 <div>
                                     <h4 className="head2">اليومي</h4>
-                                    <h2>2000000</h2>
+                                    <h2>0</h2>
                                 </div>
                             </td>
                             <td>
                                 <div>
                                     <h4 className="head2">التراكمي</h4>
-                                    <h2>2000000</h2>
+                                    <h2>0</h2>
                                 </div>
                             </td>
                         </tr>
@@ -73,13 +75,13 @@ const Header = () => {
                             <td>
                                 <div>
                                     <h4 className="head2 border">الشفاء</h4>
-                                    <h2>2000</h2>
+                                    <h2>{ data.totalHealing }</h2>
                                 </div>
                             </td>
                             <td>
                                 <div>
                                     <h4 className="head2 border">الوفيات</h4>
-                                    <h2>2000</h2>
+                                    <h2>{ data.totalDeaths }</h2>
                                 </div>
                             </td>
                         </tr>
@@ -92,4 +94,4 @@ const Header = () => {
     )
 }
 
-export default Header
+export default Header;

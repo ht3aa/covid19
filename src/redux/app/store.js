@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import changeColorReducer from "../features/changeColor/changeColorSlice";
+import setNavBarBgColorReducer from "../features/setNavBarBgColor/setNavBarBgColor";
+import citiesReducer from "../features/cities/cities";
 
 export const store = configureStore({
     reducer: {
-        changeColor: changeColorReducer,
+        navBarBgColor: setNavBarBgColorReducer,
+        cities: citiesReducer
     },
 });
 

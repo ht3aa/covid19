@@ -2,7 +2,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20%;
+    direction: rtl;
+    margin-top: 25%;
+}
+.discription {
+    width: 100%;
+    text-align: start;
+    margin-top: 20px;
+    color: white;
 }
 
 @media only screen and (max-width: 950px) {
@@ -30,6 +37,7 @@
     width: 90%;
     margin: 0 auto;
     display: flex;
+    align-items: flex-end;
     flex-wrap: wrap;
     justify-content: space-between;
 }
@@ -43,14 +51,37 @@
 .cardVaccienContainer {
     text-align: center;
     margin-top: 70px;
+
 }
 .cardVaccienContainer h3 {
-    margin-bottom: 15px;
+    margin: 0 auto 15px auto;
+    width: 20rem;
+}
+.cardVaccienContainer .bg-shadow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.651);
 }
 .cardVaccienContainer .cardVaccien {
     padding: 40px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
-    background-color: rgba(0, 0, 0, 0.6); 
+    position: relative;
+}
+.cardVaccienContainer .cardVaccien img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+.positionUp {
+    position: relative;
+    z-index: 5;
 }
 .cardVaccienContainer .cardVaccien .tableHead {
     width: 16rem;
