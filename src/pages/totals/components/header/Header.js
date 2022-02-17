@@ -4,7 +4,7 @@ import generateCorona19BgImg from "../../../../globalFunctions/generateCorona19B
 import { useEffect, useState } from "react";
 import { filtersStaticsData } from "../../functions/filtersStaticsData";
 
-const Header = ({statisticsData}) => {
+const Header = ({statisticsData, vaccineData}) => {
     const [data, setData] = useState({
         todayInjured: "",
         totalInjured: "",
@@ -18,7 +18,16 @@ const Header = ({statisticsData}) => {
         }
     }, [statisticsData])
 
-    
+    function addCommas(number) {
+        let commsNumber = number.toString().split('.');
+        
+        if (commsNumber[0].length >= 5) {
+            commsNumber[0] = commsNumber[0].replace(/(\d)(?=(\d{3})+$)/g, '$1,');
+        }   
+
+        return commsNumber;
+    }
+
     return (
         <div className="heroTotals">
             <div className="corona19bgContainer">
@@ -60,14 +69,14 @@ const Header = ({statisticsData}) => {
                         <tr>
                             <td>
                                 <div>
-                                    <h4 className="head2">اليومي</h4>
-                                    <h2>0</h2>
+                                    <h4 className="head2">التاريخ</h4>
+                                    <h2>{ vaccineData.date.replaceAll("-", "/") }</h2>
                                 </div>
                             </td>
                             <td>
                                 <div>
                                     <h4 className="head2">التراكمي</h4>
-                                    <h2>0</h2>
+                                    <h2>{ addCommas(vaccineData.total_vaccinations) }</h2>
                                 </div>
                             </td>
                         </tr>
@@ -86,8 +95,6 @@ const Header = ({statisticsData}) => {
                             </td>
                         </tr>
                     </tbody>
-
-
                 </table>
             </div>
         </div>

@@ -19,7 +19,7 @@
 }
 
 .mainVaccienConatiner button {
-    margin-top: 20px;
+    margin-top: 10px;
     font-weight: normal;
     padding: 10px 30px;
 }
@@ -40,6 +40,7 @@
     align-items: flex-end;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 15px;
 }
 @media only screen and (max-width: 620px) {
     .mainVaccien {
