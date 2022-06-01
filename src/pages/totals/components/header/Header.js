@@ -70,13 +70,13 @@ const Header = ({statisticsData, vaccineData}) => {
                             <td>
                                 <div>
                                     <h4 className="head2">التاريخ</h4>
-                                    <h2>{ vaccineData.date.replaceAll("-", "/") }</h2>
+                                    <h2>2022/05/31</h2>
                                 </div>
                             </td>
                             <td>
                                 <div>
                                     <h4 className="head2">التراكمي</h4>
-                                    <h2>{ addCommas(vaccineData.total_vaccinations) }</h2>
+                                    <h2>10,689,257</h2>
                                 </div>
                             </td>
                         </tr>
